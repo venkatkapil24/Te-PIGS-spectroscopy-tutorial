@@ -14,7 +14,7 @@ We will train a quantum effective potential corresponding to the potential of me
 
 This is as easy as performing molecular dynamics using the Te PIGS quantum effective potential at 300 K. The vibrational density of states can be estimated as the time correlation function of positions. 
 
-## Summary of tutorial
+## Tutorial summary 
 
 We will predict the vibrational spectrum of water at room temperature. It is possible to run 'density functional theory quality' water using the MACE-OFF(S) potential [3], a recently developed hybrid-functional DFT-level machine learning potential for general organic molecules. However, to speed things up, we will perform simulations with the flexible q-TIP4P/f water model [4]. Our goal will be to compare the classical and quantal vibrational density of states (without IR/Raman selection rules). The classical spectra will be generated using standard molecular dynamics. The quantal spectra will be computed using the standard ring polymer molecular dynamics and the much less expensive and more accurate Te PIGS approach. If time permits, we can also predict R and Raman spectra using a [machine-learning model](https://github.com/venkatkapil24/ML-quantum-vibrational-spectroscopy) to predict the polarization and polarizability of bulk water [5].  
 
@@ -22,7 +22,7 @@ We will predict the vibrational spectrum of water at room temperature. It is pos
 
 Go through the individual directories and follow the instructions in the README.md files. 
 
-## Python setup summary
+## Python Setup
 
 ## References 
 
