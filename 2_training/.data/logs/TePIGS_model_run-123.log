@@ -1,0 +1,480 @@
+2024-09-17 16:30:18.483 INFO: MACE version: 0.3.5
+2024-09-17 16:30:18.483 INFO: Configuration: Namespace(config=None, name='TePIGS_model', seed=123, log_dir='logs', model_dir='.', checkpoints_dir='checkpoints', results_dir='results', downloads_dir='downloads', device='cpu', default_dtype='float64', distributed=False, log_level='INFO', error_table='PerAtomRMSE', model='MACE', r_max=3.0, radial_type='bessel', num_radial_basis=8, num_cutoff_basis=5, pair_repulsion=False, distance_transform='None', interaction='RealAgnosticResidualInteractionBlock', interaction_first='RealAgnosticResidualInteractionBlock', max_ell=3, correlation=3, num_interactions=2, MLP_irreps='16x0e', radial_MLP='[64, 64, 64]', hidden_irreps='64x0e', num_channels=None, max_L=None, gate='silu', scaling='no_scaling', avg_num_neighbors=1, compute_avg_num_neighbors=True, compute_stress=False, compute_forces=True, compute_polarizability=False, compute_atomic_dipole=False, train_file='../1_dataset_curation/dataset.xyz', valid_file='../1_dataset_curation/dataset.xyz', valid_fraction=0.1, test_file='../1_dataset_curation/dataset.xyz', test_dir=None, multi_processed_test=False, num_workers=0, pin_memory=True, atomic_numbers=None, mean=None, std=None, statistics_file=None, E0s='average', keep_isolated_atoms=False, energy_key='energy', forces_key='delta_force', virials_key='virials', stress_key='stress', dipole_key='dipole', charges_key='charges', polarizability_key='polarizability', loss='weighted', forces_weight=100.0, swa_forces_weight=100.0, energy_weight=0.0, swa_energy_weight=1000.0, virials_weight=1.0, swa_virials_weight=10.0, stress_weight=1.0, polarizability_weight=1.0, swa_stress_weight=10.0, dipole_weight=1.0, swa_dipole_weight=1.0, config_type_weights='{"Default":1.0}', huber_delta=0.01, optimizer='adam', beta=0.9, batch_size=1, valid_batch_size=10, lr=0.01, swa_lr=0.001, weight_decay=5e-07, amsgrad=True, scheduler='ReduceLROnPlateau', lr_factor=0.8, scheduler_patience=50, lr_scheduler_gamma=0.9993, swa=False, start_swa=None, ema=True, ema_decay=0.99, max_num_epochs=10, patience=2048, foundation_model=None, foundation_model_readout=True, eval_interval=2, keep_checkpoints=False, save_all_checkpoints=False, restart_latest=True, save_cpu=False, clip_grad=10.0, wandb=False, wandb_dir=None, wandb_project='', wandb_entity='', wandb_name='', wandb_log_hypers=['num_channels', 'max_L', 'correlation', 'lr', 'swa_lr', 'weight_decay', 'batch_size', 'max_num_epochs', 'start_swa', 'energy_weight', 'forces_weight'])
+2024-09-17 16:30:18.484 INFO: Using CPU
+2024-09-17 16:30:18.784 INFO: Current Git commit: 6de196283485bfa534887c6828beb18e03b11ed6
+2024-09-17 16:30:18.893 INFO: Since ASE version 3.23.0b1, using energy_key 'energy' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting energies to 'REF_energy'. You need to use --energy_key='REF_energy', to tell the key name chosen.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.893 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.894 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.895 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.896 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.897 INFO: Since ASE version 3.23.0b1, using stress_key 'stress' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting energies to 'REF_stress'. You need to use --stress_key='REF_stress', to tell the key name chosen.
+2024-09-17 16:30:18.902 INFO: Loaded 100 training configurations from '../1_dataset_curation/dataset.xyz'
+2024-09-17 16:30:18.993 INFO: Since ASE version 3.23.0b1, using energy_key 'energy' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting energies to 'REF_energy'. You need to use --energy_key='REF_energy', to tell the key name chosen.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.994 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.995 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.996 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:18.997 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.000 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.000 INFO: Since ASE version 3.23.0b1, using stress_key 'stress' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting energies to 'REF_stress'. You need to use --stress_key='REF_stress', to tell the key name chosen.
+2024-09-17 16:30:19.005 INFO: Loaded 100 validation configurations from '../1_dataset_curation/dataset.xyz'
+2024-09-17 16:30:19.099 INFO: Since ASE version 3.23.0b1, using energy_key 'energy' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting energies to 'REF_energy'. You need to use --energy_key='REF_energy', to tell the key name chosen.
+2024-09-17 16:30:19.099 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.100 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.101 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.102 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 WARNING: Failed to extract energy: Atoms object has no calculator.
+2024-09-17 16:30:19.103 INFO: Since ASE version 3.23.0b1, using stress_key 'stress' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting energies to 'REF_stress'. You need to use --stress_key='REF_stress', to tell the key name chosen.
+2024-09-17 16:30:19.108 INFO: Loaded 100 test configurations from '../1_dataset_curation/dataset.xyz'
+2024-09-17 16:30:19.108 INFO: Total number of configurations: train=100, valid=100, tests=[Default: 100]
+2024-09-17 16:30:19.112 INFO: AtomicNumberTable: (1, 8)
+2024-09-17 16:30:19.115 INFO: Atomic Energies not in training file, using command line argument E0s
+2024-09-17 16:30:19.115 INFO: Computing average Atomic Energies using least squares regression
+2024-09-17 16:30:19.116 INFO: Atomic energies: [0.0, 0.0]
+2024-09-17 16:30:19.297 INFO: WeightedEnergyForcesLoss(energy_weight=0.000, forces_weight=100.000)
+2024-09-17 16:30:19.433 INFO: Average number of neighbors: 8.536041666666666
+2024-09-17 16:30:19.433 INFO: Selected the following outputs: {'energy': True, 'forces': True, 'virials': False, 'stress': False, 'dipoles': False}
+2024-09-17 16:30:19.433 INFO: No scaling selected
+2024-09-17 16:30:19.433 INFO: Building model
+2024-09-17 16:30:19.433 INFO: Hidden irreps: 64x0e
+2024-09-17 16:30:20.682 WARNING: Cannot find checkpoint with tag 'TePIGS_model_run-123' in 'checkpoints'
+2024-09-17 16:30:20.683 INFO: ScaleShiftMACE(
+  (node_embedding): LinearNodeEmbeddingBlock(
+    (linear): Linear(2x0e -> 64x0e | 128 weights)
+  )
+  (radial_embedding): RadialEmbeddingBlock(
+    (bessel_fn): BesselBasis(r_max=3.0, num_basis=8, trainable=False)
+    (cutoff_fn): PolynomialCutoff(p=5.0, r_max=3.0)
+  )
+  (spherical_harmonics): SphericalHarmonics()
+  (atomic_energies_fn): AtomicEnergiesBlock(energies=[0.0000, 0.0000])
+  (interactions): ModuleList(
+    (0): RealAgnosticInteractionBlock(
+      (linear_up): Linear(64x0e -> 64x0e | 4096 weights)
+      (conv_tp): TensorProduct(64x0e x 1x0e+1x1o+1x2e+1x3o -> 64x0e+64x1o+64x2e+64x3o | 256 paths | 256 weights)
+      (conv_tp_weights): FullyConnectedNet[8, 64, 64, 64, 256]
+      (linear): Linear(64x0e+64x1o+64x2e+64x3o -> 64x0e+64x1o+64x2e+64x3o | 16384 weights)
+      (skip_tp): FullyConnectedTensorProduct(64x0e+64x1o+64x2e+64x3o x 2x0e -> 64x0e+64x1o+64x2e+64x3o | 32768 paths | 32768 weights)
+      (reshape): reshape_irreps()
+    )
+    (1): RealAgnosticResidualInteractionBlock(
+      (linear_up): Linear(64x0e -> 64x0e | 4096 weights)
+      (conv_tp): TensorProduct(64x0e x 1x0e+1x1o+1x2e+1x3o -> 64x0e+64x1o+64x2e+64x3o | 256 paths | 256 weights)
+      (conv_tp_weights): FullyConnectedNet[8, 64, 64, 64, 256]
+      (linear): Linear(64x0e+64x1o+64x2e+64x3o -> 64x0e+64x1o+64x2e+64x3o | 16384 weights)
+      (skip_tp): FullyConnectedTensorProduct(64x0e x 2x0e -> 64x0e | 8192 paths | 8192 weights)
+      (reshape): reshape_irreps()
+    )
+  )
+  (products): ModuleList(
+    (0-1): 2 x EquivariantProductBasisBlock(
+      (symmetric_contractions): SymmetricContraction(
+        (contractions): ModuleList(
+          (0): Contraction(
+            (contractions_weighting): ModuleList(
+              (0-1): 2 x GraphModule()
+            )
+            (contractions_features): ModuleList(
+              (0-1): 2 x GraphModule()
+            )
+            (weights): ParameterList(
+                (0): Parameter containing: [torch.float64 of size 2x4x64]
+                (1): Parameter containing: [torch.float64 of size 2x1x64]
+            )
+            (graph_opt_main): GraphModule()
+          )
+        )
+      )
+      (linear): Linear(64x0e -> 64x0e | 4096 weights)
+    )
+  )
+  (readouts): ModuleList(
+    (0): LinearReadoutBlock(
+      (linear): Linear(64x0e -> 1x0e | 64 weights)
+    )
+    (1): NonLinearReadoutBlock(
+      (linear_1): Linear(64x0e -> 16x0e | 1024 weights)
+      (non_linearity): Activation [x] (16x0e -> 16x0e)
+      (linear_2): Linear(16x0e -> 1x0e | 16 weights)
+    )
+  )
+  (scale_shift): ScaleShiftBlock(scale=1.000000, shift=0.000000)
+)
+2024-09-17 16:30:20.686 INFO: Number of parameters: 148688
+2024-09-17 16:30:20.686 INFO: Optimizer: Adam (
+Parameter Group 0
+    amsgrad: True
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    name: embedding
+    weight_decay: 0.0
+
+Parameter Group 1
+    amsgrad: True
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    name: interactions_decay
+    weight_decay: 5e-07
+
+Parameter Group 2
+    amsgrad: True
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    name: interactions_no_decay
+    weight_decay: 0.0
+
+Parameter Group 3
+    amsgrad: True
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    name: products
+    weight_decay: 5e-07
+
+Parameter Group 4
+    amsgrad: True
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    name: readouts
+    weight_decay: 0.0
+)
+2024-09-17 16:30:20.686 INFO: Using gradient clipping with tolerance=10.000
+2024-09-17 16:30:20.686 INFO: Started training
+2024-09-17 16:30:38.869 INFO: Epoch None: loss=0.5885, RMSE_E_per_atom=20.3 meV, RMSE_F=242.6 meV / A
+2024-09-17 16:31:46.154 INFO: Epoch 0: loss=0.5041, RMSE_E_per_atom=19.5 meV, RMSE_F=224.5 meV / A
+2024-09-17 16:32:25.575 INFO: Epoch 2: loss=0.5021, RMSE_E_per_atom=17.4 meV, RMSE_F=224.1 meV / A
+2024-09-17 16:33:04.606 INFO: Epoch 4: loss=0.4996, RMSE_E_per_atom=16.6 meV, RMSE_F=223.5 meV / A
+2024-09-17 16:33:44.435 INFO: Epoch 6: loss=0.4990, RMSE_E_per_atom=16.2 meV, RMSE_F=223.4 meV / A
+2024-09-17 16:34:28.072 INFO: Epoch 8: loss=0.4991, RMSE_E_per_atom=15.4 meV, RMSE_F=223.4 meV / A
+2024-09-17 16:34:45.458 INFO: Training complete
+2024-09-17 16:34:45.460 INFO: Computing metrics for training, validation, and test sets
+2024-09-17 16:34:45.586 INFO: Loading checkpoint: checkpoints/TePIGS_model_run-123_epoch-6.pt
+2024-09-17 16:34:45.618 INFO: Loaded model from epoch 6
+2024-09-17 16:34:45.621 INFO: Evaluating train ...
+2024-09-17 16:34:52.126 INFO: Evaluating valid ...
+2024-09-17 16:34:56.958 INFO: Evaluating Default ...
+2024-09-17 16:35:01.614 INFO: 
++-------------+---------------------+------------------+-------------------+
+| config_type | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % |
++-------------+---------------------+------------------+-------------------+
+|    train    |         16.2        |      223.4       |       90.36       |
+|    valid    |         16.2        |      223.4       |       90.36       |
+|   Default   |         16.2        |      223.4       |       90.36       |
++-------------+---------------------+------------------+-------------------+
+2024-09-17 16:35:01.620 INFO: Saving model to checkpoints/TePIGS_model_run-123.model
+2024-09-17 16:35:01.819 INFO: Compiling model, saving metadata to TePIGS_model_compiled.model
+2024-09-17 16:35:02.984 INFO: Done
