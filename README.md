@@ -2,8 +2,13 @@
 
 Here is a demonstration of the Te PIGS methods [1] on estimating first-principles quality IR and Raman spectra of liquid water at 300 K by machine learning an effective potential that incorporates quantum nuclear effects. It comprises two main steps:
 
-1. <b>Training</b>: We will train a quantum effective potential corresponding to the potential of mean force of the centroid of the path integral using the Te PIGS method. The training data will be generated from a path-integral molecular dynamics simulation at an elevated temperature of 500 K. The effective potential will be fit using the MACE [2] machine learning framework. 
-2. <b>Prediction</b>: This is as easy as performing molecular dynamics using the Te PIGS quantum effective potential at 300 K. The vibrational density of states can be estimated as the time correlation function of positions. 
+## Training
+
+We will train a quantum effective potential corresponding to the potential of mean force of the centroid of the path integral using the Te PIGS method. The training data will be generated from a path-integral molecular dynamics simulation at an elevated temperature of 500 K. The effective potential will be fit using the MACE [2] machine learning framework. 
+
+# Trajectory generation 
+
+This is as easy as performing molecular dynamics using the Te PIGS quantum effective potential at 300 K. The vibrational density of states can be estimated as the time correlation function of positions. 
 
 In this demo, we focus on the vibrational spectrum of water at room temperature. It is possible to run 'density functional theory quality' water using the MACE-OFF(S) potential [3], a recently developed hybrid-functional DFT-level machine learning potential for general organic molecules. However, to speed things up, we will perform simulations with the flexible qTIP4P/f water model. Our goal will be to compare the classical and quantal vibrational density of states (without IR/Raman selection rules). The classical spectra will be generated using standard molecular dynamics. The quantal spectra will be computed using the standard ring polymer molecular dynamics and the much less expensive and more accurate Te PIGS approach. If time permits, we can also predict R and Raman spectra using a [machine-learning model](https://github.com/venkatkapil24/ML-quantum-vibrational-spectroscopy) to predict the polarization and polarizability of bulk water [4].  
 
