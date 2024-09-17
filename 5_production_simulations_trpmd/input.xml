@@ -4,7 +4,7 @@
     <trajectory filename='pos' stride='8' flush='100' format='xyz' cell_units='angstrom'> x_centroid{angstrom} </trajectory>
     <checkpoint stride='200'/>
   </output>
-  <total_steps> 400000 </total_steps>
+  <total_steps> 20000 </total_steps>
   <prng>
     <seed>32415</seed>
   </prng>
