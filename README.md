@@ -1,9 +1,10 @@
 # Quantum vibrational spectroscopy using Te PIGS
 
-Here is a demonstration of the Te PIGS methods [1] on estimating the vibrational spectrum of liquid water at 300 K by machine learning an effective potential that incorporates quantum nuclear effects. It comprises two main steps: 
+Here is a demonstration of the Te PIGS methods [1] on estimating the vibrational spectrum of liquid water at 300 K by machine learning an effective potential that incorporates quantum nuclear effects. 
 
 ![A schematic of the PIGS approach](PIGS.png)
 
+Our approach comprises two steps: 
 
 ## Training
 
