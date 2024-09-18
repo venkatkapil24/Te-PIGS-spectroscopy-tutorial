@@ -1,6 +1,6 @@
 # Quantum vibrational spectroscopy using Te PIGS
 
-Here is a demonstration of the temperature elevation (Te) path-integral coarse-graining simulation (PIGS) methods [1] for estimating the vibrational spectrum of liquid water at 300 K by machine learning an effective potential that incorporates quantum nuclear effects. Follow this procedure to simulate approximate quantum dynamics of any system (for spectroscopy and transport). 
+Here is a demonstration of the temperature elevation (Te) path-integral coarse-graining simulation (PIGS) methods [1] for estimating the vibrational spectrum of liquid water at 300 K. We do so by machine learning an effective potential that incorporates quantum nuclear effects and performing molecular dynamics. Follow this procedure to simulate the approximate quantum dynamics of any system (for spectroscopy and transport). 
 
 ![A schematic of the PIGS approach](PIGS.png)
 
