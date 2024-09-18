@@ -1,11 +1,11 @@
-To estimate IR and Raman spectra, we need the system's total polarization and polarizability over its dynamical trajectory. Go to the directory ```4_dielectric_response_prediction``` and run the ``` get_dielectric_response.sh ``` script. This step uses the MACE dipole and polarizability model developed in Ref. [4]. This step is optional if you only want to estimate the vibrational density states. This script produces the following files: 
-
 To perform this step, you'll need to work with a specific commit of mace [ea9178fc7d6cdb54eb850623e09000c5ae2724e]. Go to the mace root directory and perform the following steps:
 ```bash
 git checkout ea9178fc7d6cdb54eb850623e09000c5ae27243e
 pip install .
 ```
 
+
+To estimate IR and Raman spectra, we need the system's total polarization and polarizability over its dynamical trajectory. Go to the directory ```4_dielectric_response_prediction``` and run the ``` get_dielectric_response.sh ``` script. This step uses the MACE dipole and polarizability model developed in Ref. [4]. This step is optional if you only want to estimate the vibrational density states. This script produces the following files: 
 
 
 | File Name             | Description                                                                 |
