@@ -4,5 +4,5 @@ Check out the ```train.sh``` file. It's a standard ```MACE``` training script fo
 
 Since quantum nuclear effects are localized to short ranges, we use a relatively small cutoff using ```--r_max=3.0```. Since the regression task is easy, the model can be made simpler by reducing the value associated with the flag ```--hidden_irreps='64x0e'```.
 
-> **Note:**
-> This step assumes that your have access to ```mace``` python bindings and cli.  
+![training script scheme](./training-input-scheme)
+
