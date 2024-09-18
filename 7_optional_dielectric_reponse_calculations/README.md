@@ -1,3 +1,5 @@
+##  Predicting dielectric response tensors
+
 To perform this step, you'll need to work with a specific commit of mace [ea9178fc7d6cdb54eb850623e09000c5ae2724e]. Go to the mace root directory and perform the following steps:
 ```bash
 git checkout ea9178fc7d6cdb54eb850623e09000c5ae27243e
