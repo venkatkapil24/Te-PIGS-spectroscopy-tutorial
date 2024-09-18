@@ -1,8 +1,11 @@
-## Training 
+## i-PI in a nutshell
 
-### Step 1: Generating reference PIMD training data
 
-Go to the directory ```0_reference_pimd``` and check out the ```input.xml``` file. We perform a path integral molecular dynamics simulation at 500 K using 8 imaginary time slices and a timestep of 0.5 fs. The total training data corresponds to 10 ps of simulation time. 
+
+
+## Generating reference PIMD training data
+
+Check out the ```input.xml``` file. We perform a path integral molecular dynamics simulation at 500 K using 8 imaginary time slices and a timestep of 0.5 fs. The total training data corresponds to 10 ps of simulation time. 
 
 To fit the Te PIGS effective potential, we regress the centroid force against the centroid positions, but to make the fitting task easier, we can learn the difference between the centroid force and the physical force acting on the centroid position. The centroid positions and forces can be printed out using:
 
