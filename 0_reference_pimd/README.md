@@ -1,7 +1,7 @@
 ## i-PI in a nutshell
 
 
-
+![Different parts of an i-PI input file](./i-PI input.png)
 
 ## Generating reference PIMD training data
 
