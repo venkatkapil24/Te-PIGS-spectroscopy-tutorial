@@ -1,4 +1,4 @@
-### Step 3: Fitting the Te PIGS potential
+### Fitting the Te PIGS potential
 
 Check out the ```train.sh``` file. It's a standard ```MACE``` training script for training on forces only using  the  ```--energy_weight=0.0``` and ```--scaling='no_scaling'``` flags. To ensure we fit the difference between the centroid and physical forces, we use the flag ```--forces_key='delta_force'```. 
 
