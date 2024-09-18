@@ -1,28 +1,44 @@
 # Quantum vibrational spectroscopy using Te PIGS
 
-Here is a demonstration of the Te PIGS methods [1] on estimating the vibrational spectrum of liquid water at 300 K by machine learning an effective potential that incorporates quantum nuclear effects. 
+Here is a demonstration of the temperature elevation (Te) path-integral coarse-graining simulation (PIGS) methods [1] for estimating the vibrational spectrum of liquid water at 300 K by machine learning an effective potential that incorporates quantum nuclear effects. Follow this procedure to simulate approximate quantum dynamics of any system (for spectroscopy and transport). 
 
 ![A schematic of the PIGS approach](PIGS.png)
 
 Our approach comprises two steps: 
 
-## Training
+### 1. Training
 
 We will train a quantum effective potential corresponding to the potential of mean force of the centroid of the path integral using the Te PIGS method. The training data will be generated from a path-integral molecular dynamics simulation at an elevated temperature (Te) of 500 K. The effective potential will represented using the MACE [2] machine learning framework and fit with the path-integral coarse-graining simulation (PIGS) methods. 
 
-## Trajectory generation 
+### 2. Prediction (Trajectory generation)
 
 This is as easy as performing molecular dynamics using the Te PIGS quantum effective potential at 300 K. The vibrational density of states can be estimated as the time correlation function of positions. 
 
 ## Tutorial summary 
 
-We will predict the vibrational spectrum of water at room temperature. It is possible to run 'density functional theory quality' water using the MACE-OFF(S) potential [3], a recently developed hybrid-functional DFT-level machine learning potential for general organic molecules. However, to speed things up, we will perform simulations with the flexible q-TIP4P/f water model [4]. Our goal will be to compare the classical and quantal vibrational density of states (without IR/Raman selection rules). The classical spectra will be generated using standard molecular dynamics. The quantal spectra will be computed using the standard ring polymer molecular dynamics and the much less expensive and more accurate Te PIGS approach. If time permits, we can also predict R and Raman spectra using a [machine-learning model](https://github.com/venkatkapil24/ML-quantum-vibrational-spectroscopy) to predict the polarization and polarizability of bulk water [5].  
+We will predict the vibrational spectrum of water at room temperature, a widely benchmarked system. Using the MACE-OFF (S) potential [3], water can be modelled at 'density functional theory quality'. To speed things up, however, we will perform simulations with the flexible q-TIP4P/f water model [4] but provide scripts for simulations with MACE-OFF(S). 
+
+We will predict and compare the classical and quantal vibrational density of states (without IR/Raman selection rules). The classical spectra will be generated using standard molecular dynamics. The quantal spectra will be computed using the standard ring polymer molecular dynamics and the Te PIGS approach. If time permits, we can also predict R and Raman spectra using a [machine-learning model](https://github.com/venkatkapil24/ML-quantum-vibrational-spectroscopy) to predict the polarization and polarizability of bulk water [5].  
 
 ##
 
 Go through the individual directories and follow the instructions in the README.md files. 
 
+| Directories                                    |
+|------------------------------------------------|
+| [0_reference_pimd/](./0_reference_pimd/)       |
+| [1_dataset_curation/](./1_dataset_curation/)   |
+| [2_training/](./2_training/)                   |
+| [3_production_simulations_tepigs/](./3_production_simulations_tepigs/) |
+| [4_production_simulations_classical/](./4_production_simulations_classical/) |
+| [5_production_simulations_trpmd/](./5_production_simulations_trpmd/) |
+| [6_vibrational_dos_spectra/](./6_vibrational_dos_spectra/) |
+| [7_optional_dielectric_reponse_calculations/](./7_optional_dielectric_reponse_calculations/) |
+| [8_optional_ir_and_raman_spectra/](./8_optional_ir_and_raman_spectra/) |
+
 ## Python Setup
+
+We need to set up a python (or conda) environment for [mace](https://github.com/ACEsuit/mace) and [i-PI](https://github.com/i-pi/i-pi). 
 
 ## References 
 
