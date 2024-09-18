@@ -1,39 +1,17 @@
-### Step 4: Production simulations
+### Calculating the vibrational density of states 
 
-Go to the directory ```3_production_simulations``` and checkout the ```input.xml``` file. Here, we run a simple molecular dynamics simulation at 300 K using a potential that adds a correction to the physical potential. The two potentials can be added by defining two forcefield sockets using
-
-```xml
-<ffsocket name='maceoff23' mode='unix' pbc='false'>
-    <address> driver </address>
-</ffsocket>
-<ffsocket name='maceoff23-pigs' mode='unix' pbc='false'>
-    <address> driver-pigs </address>
-</ffsocket>
-```
-
-and setting up two force components using
-
-```xml
-<forces>
-    <force forcefield='maceoff23' weight='1'> </force>
-    <force forcefield='maceoff23-pigs' weight='1'> </force>
-</forces>
-```
-
-To estimate the vibrational spectrum, we print out the positions every 2 fs using:
-
-```xml
-<trajectory filename='pos' stride='4' flush='100' format='ase'> positions </trajectory>
-```
-
-
-The Te PIGS potential is run using an ASEClient setup in the ```run-ase-pigs.py``` file.
-
-The simulation can be run using the bash script.
+You can calculate the spectra using the scripts
 
 ```bash
-bash run.sh
+bash get_spectra.sh
 ```
 
-> **Note:**
-> This step assumes that you have a working installation of i-PI using `pip` or have sourced the `env.sh` file in the top-level source directory and your Python environment has access to ```mace```.
+and visualize them using
+
+```bash
+python plot_spectra.py 
+```
+
+The reference quantum dynamics result is taken from the quasi-centroid molecular dynamics (qcmd), which has been carefully validated but is much more expensive than thermostatted ring polymer molecular dynamics (trpmd). As you can see, the classical result is blue-shifted, and the trpmd result is broadened. The Te PIGS method has the cost of classical molecular dynamics and improved upon the accuracy of trpmd.  
+
+![Spectra](./scheme.png)
