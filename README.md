@@ -38,7 +38,17 @@ Go through the individual directories and follow the instructions in the README.
 
 ## Python Setup
 
-We need to set up a python (or conda) environment for [mace](https://github.com/ACEsuit/mace) and [i-PI](https://github.com/i-pi/i-pi). 
+We need to set up a python (or conda) environment for [mace](https://github.com/ACEsuit/mace) and [i-PI](https://github.com/i-pi/i-pi). I am assuming that your MACE Python environment is already set up. For i-PI, things are simple. 
+
+```bash
+git clone https://github.com/i-pi/i-pi
+cd i-pi
+# install the Fortran drivers for testing or low cost forcefields
+cd drivers/f90
+make 
+cd ../../
+source env.sh
+```
 
 ## References 
 
