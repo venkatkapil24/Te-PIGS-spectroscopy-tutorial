@@ -42,6 +42,3 @@ This simulation can be run by setting off the bash script:
 ```bash
 bash run.sh
 ```
-
-> **Note:**
-> This step assumes that you have a working installation of i-PI using `pip` or have sourced the `env.sh` file in the top-level source directory.
