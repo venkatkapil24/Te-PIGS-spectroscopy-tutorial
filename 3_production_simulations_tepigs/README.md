@@ -1,6 +1,6 @@
 ### Step 4: Production simulations
 
-Go to the directory ```3_production_simulations``` and checkout the ```input.xml``` file. Here, we run a simple molecular dynamics simulation at 300 K using a potential that adds a correction to the physical potential. The two potentials can be added by defining two forcefield sockets using
+Checkout the ```input.xml``` file. Here, we run a simple molecular dynamics simulation at 300 K using a potential that adds a correction to the physical potential. The two potentials can be added by defining two forcefield sockets using
 
 ```xml
 <ffsocket name='maceoff23' mode='unix' pbc='false'>
