@@ -1,7 +1,14 @@
 ## i-PI in a nutshell
 
+i-PI is based on the notion that force evaluation and sampling are mutually exclusive aspects of simulation. Hence, i-PI decouples the two by implementing the latest sampling algorithms in Python and uses a socket interface to communicate with force evaluator codes.  
 
-![Different parts of an i-PI input file](./i-PI input.png)
+![i-PI Philisophy](https://ipi-code.org/i-pi/_images/ipi-structure-v3.svg)
+
+With this decoupling, the latest advances in sampling and 'total energy and force methods' can be easily combined. 
+
+![Different parts of an i-PI input file](./i-PI%20input.png)
+
+i-PI has a modular setup, providing flexibility. 
 
 ## Generating reference PIMD training data
 
